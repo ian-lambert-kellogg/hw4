@@ -1,4 +1,9 @@
 class UsersController < ApplicationController
+
+  def show
+    @user = User.find_by({ "id" => params["id"] })
+  end
+
   def new
   end
 
@@ -9,6 +14,6 @@ class UsersController < ApplicationController
     @user["email"] = params["email"]
     @user["password"] = params["password"]
     @user.save
-    redirect_to "/"
+    redirect_to "/user/#{@user["id"]}"
   end
 end
