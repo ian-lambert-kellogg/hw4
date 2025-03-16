@@ -1,6 +1,8 @@
 <h1><%= @place["name"] %></h1>
 
-
+<p>
+<a class="btn btn-primary" href="/entries/new?place_id=<%= @place["id"] %>" role="button">New Post</a>
+</p>
 
 <% if session["user_id"] != nil    %>
 <h2>My Entries</h2>
@@ -15,10 +17,5 @@ Login to see your entries
 
 <% end %>
 
-<p>
-  <a href="/entries/new?place_id=<%= @place["id"] %>">New Entry</a>
-</p>
 
-<p>
-  <a href="/places">Back to All Places</a>
-</p>
+
