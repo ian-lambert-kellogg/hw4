@@ -20,7 +20,13 @@
           <%= entry["description"] %>
        </div>
     <% end %>
-       
+
+<%# conditionally display attached file if post.uploaded_image.attached? %>
+        <%# use url_for(post.uploaded_image) as attached file's url %>
+      <%# otherwise display original image url from database column %>
+      <%# end %>
+
+
 </div>
 
 <% else %>
